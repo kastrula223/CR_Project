@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h2>Привіт, {{ user.username }}!</h2>
+    <button class="nav-button" onclick="goToGenerate()">Згенерувати колоду</button>
+    <button class="nav-button" onclick="goToLogout()">Вийти</button>
+</div>
+{% endblock %}

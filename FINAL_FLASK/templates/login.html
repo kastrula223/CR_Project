@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Вхід</h2>
+<div class="form-container">
+    <form method="POST">
+        <label for="username">Ім'я користувача</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit" class="nav-button">Увійти</button>
+    </form>
+    <p>Ще не маєш акаунту? <a href="{{ url_for('register') }}" class="nav-link">Зареєструйся</a></p>
+</div>
+{% endblock %}

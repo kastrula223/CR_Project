@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="deck">
+    {% for card in cards %}
+    <div class="card">
+        <img src="{{ card.iconUrls.medium }}" alt="{{ card.name }}">
+        <div class="card-name">{{ card.name }}</div>
+    </div>
+    {% endfor %}
+</div>
+
+<a href="{{ url_for('generate_deck') }}" class="generate-button">🔁 Згенерувати ще одну</a>
+
+<div class="back-link">
+    <a href="/dashboard" class="nav-link">⬅ Назад до дашборду</a>
+</div>
+
+{% endblock %}
